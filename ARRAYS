@@ -107,8 +107,9 @@ class Solution:
             
 
 b=Solution()
-print(b.solve(A))   
-  7. Majority element in sorted array
+print(b.solve(A))
+
+7. Majority element in sorted array
 
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
