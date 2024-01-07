@@ -91,23 +91,17 @@ class Solution:
             r-=1
 6. Leaders in an array
 
-  class Solution:
+ class Solution:
     # @param A : list of integers
     # @return a list of integers
     def solve(self, A):
         maxx=A[len(A)-1]
-        print(maxx,end=' ')
+        leaders=[maxx]
         for i in range(len(A)-2,-1,-1):
             if maxx < A[i]:
                 maxx=A[i]
-                print(A[i],end=' ') 
-                
-
-            
-            
-
-b=Solution()
-print(b.solve(A))
+                leaders.insert(0,maxx)
+        return leaders     
 
 7. Majority element in sorted array
 
