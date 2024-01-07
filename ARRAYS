@@ -89,5 +89,48 @@ class Solution:
             nums[l],nums[r]=nums[r],nums[l]
             l+=1
             r-=1
-     
+6. Leaders in an array
+
+  class Solution:
+    # @param A : list of integers
+    # @return a list of integers
+    def solve(self, A):
+        maxx=A[len(A)-1]
+        print(maxx,end=' ')
+        for i in range(len(A)-2,-1,-1):
+            if maxx < A[i]:
+                maxx=A[i]
+                print(A[i],end=' ') 
+                
+
+            
+            
+
+b=Solution()
+print(b.solve(A))   
+  7. Majority element in sorted array
+
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        cnt=0
+        cnt1=0
+        el=None
+        for i in range(len(nums)):
+            if(cnt==0):
+                cnt=1
+                el=nums[i]
+            elif(el==nums[i]):
+                cnt+=1
+            else:
+                cnt-=1
+
+        for i in range(len(nums)):
+
+            if(nums[i]==el):
+                cnt1+=1                      
+        if cnt1>(len(nums)//2):
+            return True
+        else:
+             return False
+   
         
